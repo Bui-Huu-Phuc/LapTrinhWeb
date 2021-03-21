@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "TempData";
+}
+
+<h2>TempData</h2>
+
+<p>TempData không tự ép kiểu nên nhớ dùng Convert</p>
+<ul class="alert-warning">
+    
+    @for (int i = 0; i < Convert.ToInt32(TempData["Loop"]); i++)
+    {
+        <li>@TempData["Message"]</li>
+    }
+</ul>
+
+<p>TempData tự ép kiểu nên ko cần dung Convert</p>
+<ul class="alert-info">
+    @for (int i = 0; i < ViewBag.Loop; i++)
+    {
+        <li>@ViewBag.Message</li>
+    }
+</ul>
+

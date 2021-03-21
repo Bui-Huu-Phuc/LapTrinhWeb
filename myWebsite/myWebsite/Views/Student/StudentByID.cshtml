@@ -1,0 +1,24 @@
+﻿@using myWebsite.Models;
+@{
+    ViewBag.Title = "StudentByID";
+}
+
+<h2>StudentByID</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Sex</th>
+        <th>Birthday</th>
+    </tr>
+
+    <tr>
+        <td>@((TempData["Student"] as Student).StudentID)</td>
+        <td>@((TempData["Student"] as Student).StudentName)</td>
+        <td>@((TempData["Student"] as Student).ClassName)</td>
+        <td>@((TempData["Student"] as Student).Sex)</td>
+        <td>@((TempData["Student"] as Student).Birthday.ToShortDateString())</td>
+    </tr>
+</table>
